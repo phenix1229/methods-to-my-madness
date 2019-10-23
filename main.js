@@ -22,26 +22,20 @@ function repeat(str, repetitions) {
 }
 
 function startsWith(string, substring) {
-  const val = string.slice(0, substring.length) === substring ? true : false;
-  return val;
+  return string.slice(0, substring.length) === substring;
 }
 
 function endsWith(str, substring) {
-  const val = str.slice(-substring.length, str.length) === substring ? true : false;
-  return val;
+  return str.slice(-substring.length, str.length) === substring
 }
 
 function includes(arr, item) {
-  // const val = '';
-
   for (let i = 0; i < arr.length; i++){
-    if (arr[i] === 'hello'){
+    if (arr[i] === item){
       return true;
-    } else {
-      return false;
     }
-  // return val;
-}
+  }
+  return false
 }
 
 function join(arr, separator = '') {
@@ -69,6 +63,13 @@ function split(str, separator) {
 }
 
 function trimStart(str) {
+  let newStr = '';
+  if(str[i] !== ' '){
+    
+  };
+
+
+    
 }
 
 function trimEnd(str) {
