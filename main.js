@@ -60,14 +60,21 @@ function join(arr, separator = '') {
 
 function split(str, separator) {
   const newArr = [];
-  for (i = 0; i < str.length; i++){
-    let newStr = ''
-    if ();
-
-  }
-
+  let newStr1 = str
+  let counter = newStr1.length; 
   
-
+  while (counter > 0){
+    if (newStr1.includes(separator)){
+      let newStr2 = newStr1.slice(0, newStr1.indexOf(separator));
+      newStr1 = newStr1.slice(newStr1.indexOf(separator) + 1, newStr1.length);
+      newArr.push(newStr2);
+      counter - newStr2.length;
+      } else {
+        newArr.push(newStr1);
+        counter = 0
+      }
+  }
+  return newArr;
 }
 
 function trimStart(str) {
