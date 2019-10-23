@@ -79,13 +79,24 @@ function split(str, separator) {
 
 function trimStart(str) {
   let newStr = '';
-  if(str[i] !== ' '){
-    
-  };
+  let i = 0;
+  
 
-
-    
+  while (i < str.length){
+    if(str[i] !== ' '){
+      // newStr = newStr;
+      return newStr = str.slice(str[i], str.length)
+    } else {
+      newStr = ''
+      i++;
+    }
+  }
+  return newStr;    
 }
+
+
+    
+
 
 function trimEnd(str) {
 }
