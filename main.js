@@ -59,7 +59,15 @@ function join(arr, separator = '') {
 
 
 function split(str, separator) {
+  const newArr = [];
+  for (i = 0; i < str.length; i++){
+    let newStr = ''
+    if ();
+
+  }
+
   
+
 }
 
 function trimStart(str) {
