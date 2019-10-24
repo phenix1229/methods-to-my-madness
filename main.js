@@ -79,22 +79,22 @@ function split(str, separator) {
 
 function trimStart(str) {
   let newStr = '';
-  let i = 0;
-  
+  let newArr = [];
+  let newArr2 = [];
 
-  while (i < str.length){
-    if(str[i] !== ' '){
-      // newStr = newStr;
-      return newStr = str.slice(str[i], str.length)
-    } else {
-      newStr = ''
-      i++;
-    }
+  for(i = 0; i < str.length; i++){
+    newArr.push(str[i]);
   }
+  for(i =0; i < newArr.length; i++){
+    if(newArr[i] !== ' '){
+      newArr2 = (newArr.slice(newArr[i]));
+      }
+  }
+  for(i = 0; i < newArr2.length; i++){
+      newStr += newArr2[i]
+  } 
   return newStr;    
 }
-
-
     
 
 
