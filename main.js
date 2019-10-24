@@ -78,27 +78,23 @@ function split(str, separator) {
 }
 
 function trimStart(str) {
-  let newStr = '';
-  let newArr = [];
-  let newArr2 = [];
-
   for(i = 0; i < str.length; i++){
-    newArr.push(str[i]);
-  }
-  for(i =0; i < newArr.length; i++){
-    if(newArr[i] !== ' '){
-      newArr2 = (newArr.slice(newArr[i]));
-      }
-  }
-  for(i = 0; i < newArr2.length; i++){
-      newStr += newArr2[i]
+    if(str[i] !== ' '){
+      return str.slice(i)
+    }
   } 
-  return newStr;    
+  return ''
 }
     
 
 
 function trimEnd(str) {
+  for(i = str.length - 1; i >= 0; i--){
+    if(str[i] !== ' '){
+      return str.slice(0, i + 1)
+    }
+  } 
+  return ''
 }
 
 
